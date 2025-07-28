@@ -27,7 +27,7 @@ export const DEMO_PAGES_ROUTES: Route[] = [
     data: { title: 'Payment' },
   },
   {
-    path: 'rbc',
+    path: '',
     component: RBCComponent, // Assuming this is a placeholder for the RBC demo component
     data: { title: 'RBC Demo'},
   }

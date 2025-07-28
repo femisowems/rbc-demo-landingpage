@@ -4,7 +4,7 @@ import { ExtraPagesLayoutComponent } from '@layouts/extra-pages-layout/extra-pag
 
 export const routes: Routes = [
   {
-    path: '',
+    path: 'testing01',
     loadComponent: () =>
       import('./home/home.component').then((mod) => mod.HomeComponent),
     data: {
@@ -12,12 +12,12 @@ export const routes: Routes = [
     },
   },
   {
-    path: 'demos',
+    path: '',
     loadChildren: () =>
       import('./demos/demos.route').then((mod) => mod.DEMO_PAGES_ROUTES),
   },
   {
-    path: '',
+    path: 'testing',
     component: ExtraPagesLayoutComponent,
     loadChildren: () =>
       import('./extra-pages/extra-pages.route').then(
