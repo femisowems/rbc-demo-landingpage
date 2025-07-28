@@ -9,6 +9,15 @@
     gap: 3rem;
 }
 
+@media only screen and (max-width: 600px) {
+    .pricing-grid {
+        display: grid;
+        grid-template-columns: 1fr !important;
+        gap: 3rem;
+    }
+
+}
+
 .bg-primary {
     background-color: #0072ce !important;
 }
