@@ -1,0 +1,108 @@
+<section id="testimonial" class="py-20">
+  <div class="container">
+    <div class="mb-14 flex items-center justify-center">
+      <div class="max-w-2xl text-center">
+        <h2 class="mb-1 text-3xl/snug font-bold capitalize text-gray-800">
+          Clients Testimonials
+        </h2>
+        <p class="text-base text-gray-600">
+          Sed ut perspiciatis unde omnis iste natus error voluptatem accusantium
+          doloremque rem aperiam.
+        </p>
+      </div>
+    </div>
+
+    <div id="testimonial_directory" class="swiper">
+      <swiper-container
+        init="false"
+        [config]="swiperConfig"
+        class="swiper-wrapper -z-10"
+      >
+        @for (item of testimonialSlides; track $index) {
+          <swiper-slide class="swiper-slide">
+            <div class="flex flex-col items-center justify-center text-center">
+              <img
+                [src]="item.avatar"
+                alt="cta-img"
+                class="h-24 w-24 rounded-full"
+              />
+
+              <h3 class="mt-5 text-lg font-bold text-gray-800">
+                {{ item.name }}
+              </h3>
+              <p class="text-base font-semibold text-gray-500">
+                {{ item.position }}, USA
+              </p>
+
+              <div class="mt-5 flex items-center justify-center">
+                <lucide-icon
+                  name="star"
+                  class="inline h-5 w-5 fill-amber-300 text-amber-300"
+                />
+                <lucide-icon
+                  name="star"
+                  class="inline h-5 w-5 fill-amber-300 text-amber-300"
+                />
+                <lucide-icon
+                  name="star"
+                  class="inline h-5 w-5 fill-amber-300 text-amber-300"
+                />
+                <lucide-icon
+                  name="star"
+                  class="inline h-5 w-5 fill-amber-300 text-amber-300"
+                />
+                <lucide-icon
+                  name="star"
+                  class="inline h-5 w-5 fill-amber-300 text-amber-300"
+                />
+              </div>
+
+              <p class="mt-5 max-w-2xl text-base font-medium">
+                “{{ item.description }}”
+              </p>
+            </div>
+          </swiper-slide>
+        }
+      </swiper-container>
+
+      <div class="hidden md:block">
+        <div
+          id="swiper-button-prev"
+          class="swiper-button-prev ms-32 after:hidden"
+          tabindex="0"
+          role="button"
+          aria-label="Previous slide"
+          aria-controls="swiper-wrapper-88861593b321a7d3"
+        >
+          <div class="relative">
+            <span
+              class="absolute -start-1.5 top-1/2 -z-10 h-8 w-8 -translate-y-1/2 rounded-full border-2 border-primary"
+            ></span>
+            <lucide-icon
+              name="move-left"
+              class="h-10 w-10 text-gray-600"
+            ></lucide-icon>
+          </div>
+        </div>
+        <div
+          id="swiper-button-next"
+          class="swiper-button-next me-32 after:hidden"
+          tabindex="0"
+          role="button"
+          aria-label="Next slide"
+          aria-controls="swiper-wrapper-88861593b321a7d3"
+        >
+          <div class="relative">
+            <span
+              class="absolute -end-1.5 top-1/2 -z-10 h-8 w-8 -translate-y-1/2 rounded-full border-2 border-primary"
+            ></span>
+            <lucide-icon
+              name="move-right"
+              class="h-10 w-10 text-gray-600"
+            ></lucide-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

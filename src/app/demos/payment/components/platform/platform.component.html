@@ -1,0 +1,51 @@
+<section id="platform" class="py-24">
+  <div class="container">
+    <div class="mb-16 flex items-center justify-center">
+      <div class="max-w-2xl text-center">
+        <h5 class="mb-2 text-lg font-medium capitalize text-gray-800">
+          Our <span class="font-semibold text-primary">Platform</span>
+        </h5>
+        <h2 class="mb-1.5 text-3xl/snug font-bold capitalize text-gray-800">
+          Simple payment platform
+        </h2>
+        <p class="max-w-xl text-base font-medium text-gray-500">
+          Itaque earum rerum tenetur sapiente delectus aut reiciendis
+          voluptatibus doloribus asperiores repellat.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-12 grid grid-cols-1 gap-6 lg:grid-cols-2">
+      @for (item of paymentPlatforms; track $index) {
+        <div class="rounded-lg border p-6">
+          <div class="flex">
+            <div>
+              <div
+                class="flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 dark:bg-primary/20"
+              >
+                <i class="{{ item.icon }} text-primary text-xl"></i>
+              </div>
+            </div>
+            <div class="ms-6">
+              <h4 class="mb-2 text-xl font-bold">{{ item.title }}</h4>
+              <p class="mb-6 text-lg font-medium text-slate-500">
+                {{ item.description }}
+              </p>
+              <div class="flex items-center">
+                <a
+                  href="javascript: void(0);"
+                  class="group relative inline-block border-none text-center align-middle text-base font-semibold tracking-wide text-primary duration-500 hover:text-primary"
+                  ><span
+                    class="absolute -bottom-0 h-px w-7/12 rounded bg-primary/80 transition-all duration-500 group-hover:w-full"
+                  ></span
+                  >Learn More
+                  <i class="uil uil-angle-right align-middle text-xl/none"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

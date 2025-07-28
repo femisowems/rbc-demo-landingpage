@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+@import '../public/assets/scss/style.scss';
+@import '../node_modules/@iconscout/unicons/css/line.css';
+
+
+.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr !important;
+    gap: 3rem;
+}
+
+.bg-primary {
+    background-color: #0072ce !important;
+}
+
+.text-primary {
+    color: #0072ce !important;
+}
+
+.hover\:text-white:hover {
+    color: #ffffff !important;
+}

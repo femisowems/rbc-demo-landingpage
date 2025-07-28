@@ -1,0 +1,21 @@
+<section id="about" class="py-24">
+  <div class="container">
+    <div class="mb-14 flex items-center justify-center">
+      <div class="max-w-2xl text-center">
+        <h2 class="mb-1 text-3xl/snug font-bold capitalize text-gray-800">
+          Latest Directory
+        </h2>
+        <p class="text-base text-gray-600">
+          Itaque earum rerum tenetur sapiente delectus aut reiciendis
+          voluptatibus doloribus asperiores repellat.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+      @for (item of latestDirectories; track $index) {
+        <blog-card [item]="item" />
+      }
+    </div>
+  </div>
+</section>

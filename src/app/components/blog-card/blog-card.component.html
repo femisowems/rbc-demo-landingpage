@@ -1,0 +1,48 @@
+<div class="overflow-hidden rounded-lg border border-gray-200 bg-white">
+  <div class="grid grid-cols-1 md:grid-cols-2">
+    <div class="relative h-full w-full overflow-hidden p-2">
+      <img
+        [src]="item.image"
+        class="h-full w-full rounded-md transition-all duration-700"
+        alt=""
+      />
+      <div class="absolute inset-0 bottom-5 left-auto right-5 top-auto">
+        @for (star of [].constructor(maxStars); track $index; let i = $index) {
+          @if (i < item.rating) {
+            <lucide-angular
+              name="star"
+              class="me-0.5 inline h-4 w-4 fill-amber-300 text-amber-300"
+            />
+          } @else {
+            <lucide-angular
+              name="star"
+              class="me-0.5 inline h-4 w-4 text-amber-300"
+            />
+          }
+        }
+      </div>
+    </div>
+    <div class="flex h-full flex-col p-4">
+      <div class="">
+        <a href="javascript:void(0);" class="mb-2.5 text-lg font-bold">{{
+          item.title
+        }}</a>
+        <p class="mb-10 mt-3 text-sm font-medium text-slate-500">
+          {{ item.description }}
+        </p>
+      </div>
+      <div class="mt-auto flex flex-col items-start">
+        <span
+          class="mb-2.5 inline-flex items-center rounded border-s-2 border-primary bg-primary/20 px-2 py-1.5 text-xs/none font-semibold capitalize text-primary"
+          >{{ currency }}{{ item.price }} Per person</span
+        >
+        <div class="flex items-center justify-center">
+          <img [src]="item.avatar" class="h-10 w-10 rounded-full" alt="" />
+          <h5 class="ps-4 text-base font-semibold text-slate-800">
+            {{ item.name }}
+          </h5>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

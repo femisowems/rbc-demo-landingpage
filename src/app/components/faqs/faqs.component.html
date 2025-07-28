@@ -1,0 +1,65 @@
+<section id="faq" class="py-24 {{ bgDark && 'bg-slate-50' }}">
+  <div class="container">
+    <div class="mb-14 flex items-center justify-center">
+      <div class="max-w-2xl text-center">
+        <h5 class="mb-2 text-lg font-medium capitalize text-gray-800">
+          Help <span class="font-semibold text-primary">Center</span>
+        </h5>
+        <h2 class="mb-1 text-3xl/snug font-bold text-gray-800">
+          Frequently asked questions
+        </h2>
+      </div>
+    </div>
+
+    <div class="mx-auto max-w-2xl">
+      <div class="hs-accordion-group space-y-4">
+        @for (
+          item of faqs;
+          track $index;
+          let first = $first;
+          let idx = $index
+        ) {
+          <div
+            class="hs-accordion {{
+              first && 'active'
+            }} border border-gray-200 rounded-lg overflow-hidden"
+            id="faq-{{ idx }}"
+          >
+            <button
+              class="hs-accordion-toggle inline-flex w-full items-center justify-between gap-x-3 px-6 py-4 text-left capitalize text-gray-950 transition-all"
+              aria-controls="faq-accordion-1"
+            >
+              <h5 class="text-base font-semibold">
+                <i
+                  class="uil uil-question-circle me-2 align-middle text-xl/none"
+                ></i>
+                {{ item.question }}
+              </h5>
+              <lucide-angular
+                name="chevron-up"
+                class="h-4 w-4 transition-all duration-500 hs-accordion-active:-rotate-90"
+              ></lucide-angular>
+            </button>
+            <div
+              id="faq-accordion-{{ idx }}"
+              class="hs-accordion-content w-full overflow-hidden {{
+                !first && 'hidden'
+              }} transition-[height] duration-300"
+              aria-labelledby="faq-1"
+            >
+              <div class="px-6 pb-4 pt-0">
+                <p class="mb-2 text-sm font-medium text-gray-600">
+                  {{ item.answer }}
+                </p>
+                <p class="text-sm font-medium text-gray-600">
+                  Nullam dictum felis eu pede mollis pretium. Integer tincidunt.
+                  Cras dapibus.
+                </p>
+              </div>
+            </div>
+          </div>
+        }
+      </div>
+    </div>
+  </div>
+</section>

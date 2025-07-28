@@ -1,0 +1,79 @@
+<section id="home" class="relative py-72">
+  <div class="container">
+    <div
+      class="absolute inset-0 bg-cover bg-no-repeat"
+      style="background-image: url(assets/images/landing/directory/hero-bg.jpg)"
+    >
+      <div class="relative z-30 h-full w-full bg-black/60"></div>
+    </div>
+
+    <div class="relative z-30">
+      <div class="max-w-2xl">
+        <h2 class="mb-4 text-6xl/tight font-bold text-white">
+          Find Your Dream Place Just In a Click
+        </h2>
+        <p class="mb-16 text-lg text-slate-100">
+          Maecenas tempus, tellus eget condimentum rhoncus quam semper libero
+          sit amet adipiscing sem neque sed ipsum nam quam nunc blandit vel
+          luctus pulvinar.
+        </p>
+        <div
+          class="items-center gap-5 rounded border bg-white p-3 shadow-sm lg:flex"
+        >
+          <div class="w-full items-center justify-between sm:flex">
+            <div
+              class="flex w-full items-center border-b border-r sm:border-b-0"
+            >
+              <lucide-angular name="search" />
+              <input
+                type="text"
+                id="hero-input"
+                name="hero-input"
+                class="w-full border-0 bg-transparent focus:ring-0"
+                placeholder="what are you searching for ?"
+              />
+            </div>
+            <div class="flex w-full items-center ps-4">
+              <lucide-angular name="map-pin" />
+              <input
+                type="text"
+                id="hero-input"
+                name="hero-input"
+                class="w-full border-0 bg-transparent focus:ring-0"
+                placeholder="Location"
+              />
+            </div>
+            <button
+              class="inline-flex items-center rounded-md bg-gradient-to-r from-red-600 via-red-500 to-red-400 px-6 py-3 text-base text-white duration-300"
+            >
+              <span class="hidden sm:inline">Search</span>
+              <i class="uil uil-search ms-2 text-lg/none text-white"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div
+    class="absolute bottom-0 end-0 start-0 z-30 hidden bg-neutral-800/50 py-9 md:block"
+  >
+    <div
+      class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-2 xl:grid-cols-6"
+    >
+      @for (item of statsData; track $index) {
+        <div class="flex items-center justify-center">
+          <div
+            class="bg-[url('../public/assets/images/landing/directory/icons/icon-bg.png')]"
+          >
+            <img [src]="item.image" alt="" />
+          </div>
+          <div class="ms-4">
+            <h4 class="text-lg font-semibold text-white">{{ item.name }}</h4>
+            <h5 class="font-bold text-white">{{ item.count }}</h5>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

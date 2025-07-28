@@ -1,0 +1,38 @@
+<section id="about" class="bg-white py-24">
+  <div class="container">
+    <div class="mb-16 flex items-center justify-center">
+      <div class="max-w-2xl text-center">
+        <h5 class="mb-2 text-lg font-medium capitalize text-gray-800">
+          Our <span class="font-semibold text-primary">Work</span>
+        </h5>
+        <h2 class="mb-1.5 text-3xl/snug font-bold capitalize text-gray-800">
+          How it work
+        </h2>
+        <p class="max-w-xl text-base font-medium text-gray-500">
+          Sending your money has never been so Easier.
+        </p>
+      </div>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      @for (item of aboutData; track $index) {
+        <div
+          class="group flex items-center justify-center rounded-2xl border border-b-4 transition-all duration-500 hover:-translate-y-2 hover:border-b-primary"
+        >
+          <div class="p-10 text-center">
+            <div class="mb-6 inline-flex items-center justify-center">
+              <lucide-icon
+                [name]="item.icon"
+                class="h-8 w-8 fill-primary/20 text-primary"
+              ></lucide-icon>
+            </div>
+            <h3 class="mb-1 text-2xl font-bold">{{ item.title }}</h3>
+            <p class="text-base font-medium text-gray-500">
+              {{ item.description }}
+            </p>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

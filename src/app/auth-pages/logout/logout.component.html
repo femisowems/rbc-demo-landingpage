@@ -1,0 +1,29 @@
+<div class="grid lg:grid-cols-2">
+  <div class="flex h-full flex-col p-10">
+    <div class="pb-10">
+      <a routerLink="/" class="flex justify-center">
+        <img src="assets/images/logo-light.png" alt="dark logo" class="h-10" />
+      </a>
+    </div>
+
+    <div class="my-auto pb-6 text-center">
+      <h4 class="mb-3 text-2xl font-bold text-white">See you Again!</h4>
+      <p class="mx-auto mb-5 max-w-sm text-gray-300">
+        You are now successfully sign out.
+      </p>
+
+      <div class="flex items-start justify-center">
+        <img src="assets/images/other/logout.svg" alt="" class="h-52" />
+      </div>
+    </div>
+    <div class="mb-4 w-full text-center">
+      <p class="text-base font-medium leading-6 text-gray-300">
+        Back to
+        <a routerLink="/auth/login" class="ms-1 font-semibold text-primary"
+          >Log In</a
+        >
+      </p>
+    </div>
+  </div>
+  <auth-swiper />
+</div>

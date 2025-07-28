@@ -1,0 +1,5 @@
+.mt-14.grid.grid-cols-1.items-center.gap-6.md\:grid-cols-2.pricing-grid {
+    display: grid;
+    grid-template-columns: 1fr 2fr !important;
+    gap: 1rem;
+}

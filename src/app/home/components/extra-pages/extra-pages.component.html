@@ -1,0 +1,27 @@
+<section class="bg-slate-50 py-20">
+  <div class="container">
+    <div class="mb-14 flex items-center justify-center">
+      <div class="max-w-2xl text-center">
+        <span
+          class="mb-2 inline-block rounded-full border-x-2 border-x-primary bg-primary/20 px-2 text-base font-semibold text-primary"
+          >Extra Pages</span
+        >
+        <h2 class="mb-1 text-3xl/snug font-bold capitalize text-gray-800">
+          Coming Soon Pages
+        </h2>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+      @for (item of extraPages; track $index) {
+        <a routerLink="{{ item.url }}" target="_blank">
+          <div class="rounded-lg bg-slate-100 p-2">
+            <div class="">
+              <img [src]="item.image" class="rounded-md" />
+            </div>
+            <h4 class="mt-4 text-center text-lg font-bold">{{ item.name }}</h4>
+          </div>
+        </a>
+      }
+    </div>
+  </div>
+</section>

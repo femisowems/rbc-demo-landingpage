@@ -1,0 +1,142 @@
+<section
+  class="relative flex items-center justify-center bg-[url(../public/assets/images/small/small-2.jpg)] bg-cover bg-no-repeat md:h-screen"
+>
+  <div class="absolute inset-0 h-full w-full bg-black/60"></div>
+
+  <div class="container">
+    <div class="relative py-9 text-center text-white">
+      <a routerLink="/" class="mb-10 flex items-center justify-center">
+        <img src="assets/images/logo-sm.png" alt="" class="h-16" />
+      </a>
+      <div class="mx-auto max-w-xl">
+        <h2 class="mb-4 text-5xl font-bold uppercase">Coming Soon</h2>
+        <p class="text-base font-medium text-gray-300">
+          Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+          posuere cubilia.
+        </p>
+      </div>
+
+      <div class="z-30 my-10 text-white">
+        <div class="flex flex-wrap items-center justify-center gap-4">
+          <div
+            class="flex h-36 w-36 items-end justify-center rounded-xl rounded-t-[80px] bg-white/20 pb-6 backdrop-blur-2xl"
+          >
+            <div class="text-center">
+              <span id="days" class="text-5xl">{{ countdown.days }}</span>
+              <p class="mt-2">days</p>
+            </div>
+          </div>
+
+          <div
+            class="flex h-36 w-36 items-end justify-center rounded-xl rounded-t-[80px] bg-white/20 pb-6 backdrop-blur-2xl"
+          >
+            <div class="text-center">
+              <span id="hours" class="text-5xl">{{ countdown.hours }}</span>
+              <p class="mt-2">Hours</p>
+            </div>
+          </div>
+
+          <div
+            class="flex h-36 w-36 items-end justify-center rounded-xl rounded-t-[80px] bg-white/20 pb-6 backdrop-blur-2xl"
+          >
+            <div class="text-center">
+              <span id="minutes" class="text-5xl">{{ countdown.minutes }}</span>
+              <p class="mt-2">Minutes</p>
+            </div>
+          </div>
+
+          <div
+            class="flex h-36 w-36 items-end justify-center rounded-xl rounded-t-[80px] bg-white/20 pb-6 backdrop-blur-2xl"
+          >
+            <div class="text-center">
+              <span id="seconds" class="text-5xl">{{ countdown.seconds }}</span>
+              <p class="mt-2">Seconds</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="mt-14">
+        <h3 class="text-2xl font-bold text-gray-300">
+          Subscribe us to get notified!
+        </h3>
+        <div class="mx-auto max-w-xl rounded-md bg-white/20 backdrop-blur-2xl">
+          <form class="mt-7 flex w-full items-center justify-between">
+            <input
+              type="email"
+              name="email"
+              id="email"
+              class="w-full border-0 bg-transparent p-4 text-sm text-white placeholder:text-white focus:outline-none focus:ring-0"
+              placeholder="Enter Your Email"
+              autocomplete="off"
+            />
+            <button
+              type="button"
+              class="me-2 rounded-md border-0 bg-white/10 px-6 py-2 text-sm font-semibold text-white backdrop-blur-2xl transition-all duration-500 hover:bg-primary/10 hover:text-primary"
+            >
+              <div class="flex items-center justify-center gap-1">
+                <span>Submit</span>
+                <i class="fa-solid fa-arrow-right"></i>
+              </div>
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div class="flex justify-center">
+        <div class="relative mt-10">
+          <h6 class="mb-4 text-center text-xl text-white">Follow Us:</h6>
+          <ul class="flex flex-wrap items-center gap-2">
+            <li>
+              <a
+                href="javascript:void(0);"
+                target="_blank"
+                class="group inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/20 backdrop-blur-2xl transition-all duration-500 hover:bg-primary/60"
+                ><i
+                  class="uil uil-facebook-f text-xl text-white group-hover:text-white"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="javascript:void(0);"
+                target="_blank"
+                class="group inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/20 backdrop-blur-2xl transition-all duration-500 hover:bg-pink-600/60"
+                ><i
+                  class="uil uil-instagram text-xl text-white group-hover:text-white"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="javascript:void(0);"
+                target="_blank"
+                class="group inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/20 backdrop-blur-2xl transition-all duration-500 hover:bg-sky-600/60"
+                ><i
+                  class="uil uil-skype-alt text-xl text-white group-hover:text-white"
+                ></i
+              ></a>
+            </li>
+            <li>
+              <a
+                href="javascript:void(0);"
+                target="_blank"
+                class="group inline-flex h-10 w-10 items-center justify-center rounded-lg bg-white/20 backdrop-blur-2xl transition-all duration-500 hover:bg-blue-800/60"
+                ><i
+                  class="uil uil-linkedin-alt text-xl text-white group-hover:text-white"
+                ></i
+              ></a>
+            </li>
+          </ul>
+          <button
+            type="button"
+            class="group mt-5 inline-flex items-center justify-center rounded-lg bg-white/20 px-6 py-2 backdrop-blur-2xl transition-all duration-500 hover:bg-primary/20 hover:text-primary"
+            data-hs-overlay="#hs-vertically-centered-modal"
+          >
+            <i class="uil uil-phone-alt me-2 text-xl"></i> Contact Us
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

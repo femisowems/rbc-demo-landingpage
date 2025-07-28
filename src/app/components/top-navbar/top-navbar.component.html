@@ -1,0 +1,63 @@
+<header
+  [ngClass]="{ 'nav-sticky': navSticky }"
+  #homenavbar
+  id="navbar-sticky"
+  class="navbar nav-{{ isDark ? 'dark' : 'light' }}"
+>
+  <div class="container">
+    <nav>
+      <app-logo-box />
+      <div class="ms-auto flex items-center px-2.5 lg:hidden">
+        <button
+          class="hs-collapse-toggle inline-flex h-9 w-12 items-center justify-center rounded-md border border-gray-300 bg-slate-300/30"
+          type="button"
+          id="hs-unstyled-collapse"
+          data-hs-collapse="#mobileMenu"
+          data-hs-type="collapse"
+        >
+          <i class="uil uil-bars text-2xl"></i>
+        </button>
+      </div>
+
+      <div
+        id="mobileMenu"
+        class="hs-collapse mx-auto mt-2 hidden grow basis-full items-center justify-center overflow-hidden transition-all duration-300 lg:mt-0 lg:flex lg:basis-auto"
+      >
+        <ul id="navbar-navlist" class="navbar-nav">
+          @for (item of linkList; track $index) {
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                (click)="scrollToSection($event, item.link)"
+                href="{{ item.link }}"
+                >{{ item.label }}</a
+              >
+            </li>
+          }
+        </ul>
+
+        <div
+          class="mt-4 flex items-center border-t border-gray-200 pt-4 lg:mt-0 lg:hidden lg:border-none lg:pt-0"
+        >
+          <a href="#" class="nav-btn"
+            ><lucide-angular
+              name="arrow-big-down-dash"
+              class="me-2 h-5 w-5"
+            ></lucide-angular
+            >Download</a
+          >
+        </div>
+      </div>
+
+      <div class="hidden items-center lg:flex">
+        <a href="#" class="nav-btn"
+          ><lucide-angular
+            name="arrow-big-down-dash"
+            class="me-2 h-5 w-5"
+          ></lucide-angular
+          >Download</a
+        >
+      </div>
+    </nav>
+  </div>
+</header>

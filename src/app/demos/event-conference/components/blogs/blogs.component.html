@@ -1,0 +1,38 @@
+<section
+  id="blog"
+  class="relative bg-slate-50 bg-[url('../public/assets/images/landing/directory/cta-bg.png')] bg-cover bg-no-repeat py-20"
+>
+  <div class="container">
+    <div class="relative z-30">
+      <div class="mb-16 flex items-center justify-center">
+        <div class="max-w-2xl text-center">
+          <h5 class="mb-2 text-lg font-medium capitalize text-gray-800">
+            Event <span class="font-semibold text-primary">Blogs</span>
+          </h5>
+          <h2 class="mb-1.5 text-3xl/snug font-bold capitalize text-gray-800">
+            Latest Blog
+          </h2>
+          <p class="max-w-xl text-base font-medium text-gray-500">
+            Sed ut perspiciatis unde omnis iste natus error voluptatem
+            accusantium doloremque rem aperiam.
+          </p>
+        </div>
+      </div>
+
+      <div class="grid grid-cols-1 gap-6 lg:grid-cols-2">
+        @for (item of blogs; track $index) {
+          <blog-card [item]="item" />
+        }
+      </div>
+
+      <div class="mt-14 flex items-center justify-center">
+        <a
+          href="javascript: void(0);"
+          class="inline-flex items-center justify-center rounded-md border border-dashed border-primary px-4 py-2 font-semibold text-primary transition-all duration-200 hover:bg-primary hover:text-white"
+          >Load More
+          <lucide-icon name="loader" class="ms-2 inline h-5 w-5"></lucide-icon
+        ></a>
+      </div>
+    </div>
+  </div>
+</section>

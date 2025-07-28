@@ -1,0 +1,113 @@
+<section id="price" class="py-24">
+  <div class="container">
+    <div class="mb-14 flex items-center justify-center">
+      <div class="max-w-2xl text-center">
+        <h5 class="mb-2 text-lg font-medium capitalize text-gray-800">
+          Our <span class="font-semibold text-primary">Pricing</span>
+        </h5>
+        <h2 class="mb-1 text-3xl/snug font-bold text-gray-800">
+          Simple Plans For Everyone
+        </h2>
+        <p class="mb-8 text-base text-gray-600">
+          Nemo enim ipsam voluptatem that quia voluptas aut fugit
+        </p>
+        <div class="flex items-center justify-center gap-4">
+          <span class="text-base font-bold text-gray-700">Monthly</span>
+          <label
+            for="pricing-input"
+            class="relative inline-flex cursor-pointer items-center"
+          >
+            <input
+              type="checkbox"
+              (change)="togglePrice()"
+              id="pricing-input"
+              [checked]="isYearlyPrice"
+              class="peer sr-only"
+            />
+            <span
+              class="h-4 w-11 rounded-full bg-gray-200 after:absolute after:left-[2px] after:top-1/2 after:h-5 after:w-5 after:-translate-y-1/2 after:rounded-full after:border after:border-gray-300 after:bg-primary after:ring-2 after:ring-primary after:ring-offset-2 after:transition-all after:content-[''] peer-checked:after:translate-x-full peer-checked:after:border-white"
+            ></span>
+          </label>
+          <span class="text-base font-bold text-gray-700">Yearly</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="mt-10 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+      @for (plan of pricingPlans; track $index) {
+        <div class="relative overflow-hidden rounded bg-slate-50 shadow-md">
+          @if (plan.isPopular) {
+            <div
+              class="absolute end-0 top-3 inline-flex w-36 items-center gap-2 rounded-s bg-primary px-2 py-1 text-center text-sm font-semibold text-white"
+            >
+              <i class="uil uil-link text-base/none"></i>
+              Most Populer
+            </div>
+          }
+          <div class="flex h-full flex-col p-6">
+            <div class="shrink">
+              <div class="mb-6">
+                <h3
+                  class="flex items-center gap-2 text-[38px] font-bold text-gray-800"
+                >
+                  <span
+                    >{{ currency }}
+                    @if (isYearlyPrice) {
+                      {{ plan.yearlyPrice }}
+                    } @else {
+                      {{ plan.monthlyPrice }}
+                    }
+                  </span>
+                  <span class="text-lg font-medium"
+                    >/{{ isYearlyPrice ? 'year' : 'month' }}</span
+                  >
+                </h3>
+              </div>
+            </div>
+
+            <div class="">
+              <h5 class="mb-2 text-xl font-bold text-gray-800">
+                {{ plan.name }}
+              </h5>
+              <p class="text-sm font-medium text-gray-700">
+                All the basics for starting a new bissnesses.
+              </p>
+            </div>
+
+            <hr class="my-6 border-gray-400" />
+
+            <ul class="grow">
+              @for (feature of plan.features; track $index) {
+                <li class="mb-4 flex items-center gap-2 text-base font-medium">
+                  <span
+                    class="h-5 w-5 inline-flex items-center justify-center rounded-full {{
+                      feature.icon === 'check'
+                        ? 'bg-primary/20 text-primary'
+                        : 'bg-red-500/20 text-red-500'
+                    }}  text-sm font-bold"
+                  >
+                    <i class="uil uil-{{ feature.icon }}"></i>
+                  </span>
+                  <p class="text-gray-900">{{ feature.name }}</p>
+                </li>
+              }
+            </ul>
+
+            <div class="mt-3 shrink">
+              <a
+                href="javascript: void(0);"
+                class="w-full py-2 px-8 inline-flex justify-center items-center gap-2 rounded-md font-semibold {{
+                  plan.isPopular
+                    ? 'bg-primary text-white'
+                    : 'text-primary hover:bg-primary hover:text-white'
+                }} border border-primary  text-base focus:outline-none focus:ring-0 transition-all "
+              >
+                Continue
+              </a>
+            </div>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

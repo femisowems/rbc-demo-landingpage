@@ -1,0 +1,48 @@
+<section id="features" class="30 bg-primary/5 py-20">
+  <div class="container">
+    <div class="mb-14 flex items-center justify-center">
+      <div class="max-w-2xl text-center">
+        <h2 class="mb-1 text-3xl/snug font-bold capitalize text-gray-800">
+          How does it work?
+        </h2>
+        <p class="text-base text-gray-600">
+          Itaque earum rerum tenetur sapiente delectus aut reiciendis
+          voluptatibus doloribus asperiores repellat.
+        </p>
+      </div>
+    </div>
+
+    <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      @for (item of steps; track $index) {
+        <div class="group rounded-xl bg-white shadow-[0_8px_48px_#eee]">
+          <div class="shrink-0 rounded-lg p-6 text-center">
+            <div class="inline-flex items-center justify-center rounded-full">
+              <lucide-icon
+                [name]="item.icon"
+                class="h-12 w-12 text-gray-800"
+              ></lucide-icon>
+            </div>
+            <h3 class="mb-2 mt-6 text-xl font-bold text-gray-800 md:text-2xl">
+              {{ item.title }}
+            </h3>
+            <p class="mb-6 font-medium text-slate-500 md:text-base">
+              {{ item.description }}
+            </p>
+            <a
+              href="javascript:void(0);"
+              class="relative font-medium text-primary"
+              ><span
+                class="absolute -bottom-0.5 start-0 h-0.5 w-0 bg-primary transition-all duration-500 group-hover:w-10/12"
+              ></span>
+              Read more
+              <lucide-icon
+                name="move-right"
+                class="ms-2 inline-block h-4 w-auto"
+              ></lucide-icon
+            ></a>
+          </div>
+        </div>
+      }
+    </div>
+  </div>
+</section>

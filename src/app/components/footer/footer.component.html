@@ -1,0 +1,113 @@
+<footer
+  class="bg-slate-900 bg-[url('../public/assets/images/footer-bg.png')] bg-center bg-no-repeat"
+>
+  <div class="container lg:px-20">
+    <div class="flex flex-col justify-between gap-14 py-24 lg:flex-row">
+      <div class="lg:w-3/12">
+        <a href="javascript: void(0);" class="logo flex items-center gap-2">
+          <img src="assets/images/logo-light.png" class="w-36" alt="" />
+        </a>
+
+        <p class="mt-6 max-w-xs text-base font-medium text-gray-400">
+          Start project with tailwind css provide everything you need.
+        </p>
+        <h5 class="mb-4 mt-6 text-base text-slate-300 2xl:text-lg">
+          Follow Us :
+        </h5>
+        <ul class="flex flex-wrap items-center gap-2">
+          <li>
+            <a
+              href="javascript:void(0);"
+              class="group inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 transition-all duration-500 hover:bg-primary"
+              ><lucide-angular
+                name="facebook"
+                class="h-5 w-5 text-gray-400 group-hover:fill-white/30 group-hover:text-white"
+              ></lucide-angular
+            ></a>
+          </li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              class="group inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 transition-all duration-500 hover:bg-pink-600"
+              ><lucide-angular
+                name="instagram"
+                class="h-5 w-5 text-gray-400 group-hover:fill-white/30 group-hover:text-white"
+              ></lucide-angular
+            ></a>
+          </li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              class="group inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 transition-all duration-500 hover:bg-sky-600"
+              ><lucide-angular
+                name="twitter"
+                class="h-5 w-5 text-gray-400 group-hover:fill-white/30 group-hover:text-white"
+              ></lucide-angular
+            ></a>
+          </li>
+          <li>
+            <a
+              href="javascript:void(0);"
+              class="group inline-flex h-10 w-10 items-center justify-center rounded-lg bg-slate-800 transition-all duration-500 hover:bg-blue-800"
+              ><lucide-angular
+                name="linkedin"
+                class="h-5 w-5 text-gray-400 group-hover:fill-white/30 group-hover:text-white"
+              ></lucide-angular
+            ></a>
+          </li>
+        </ul>
+      </div>
+
+      <div class="lg:w-8/12">
+        <div class="grid gap-6 sm:grid-cols-2 md:grid-cols-3">
+          @for (item of footerLinks; track $index) {
+            <div class="">
+              <ul class="flex flex-col gap-3">
+                <h5
+                  class="mb-2 font-semibold text-gray-200 lg:text-lg xl:text-xl"
+                >
+                  {{ item.title }}
+                </h5>
+                @for (link of item.links; track $index) {
+                  <li>
+                    <a
+                      href="javascript:void(0);"
+                      class="text-base font-semibold text-gray-400 transition-all hover:text-white"
+                      ><lucide-angular
+                        name="circle-dot-dashed"
+                        class="me-2 inline-block h-4 w-4"
+                      ></lucide-angular>
+                      {{ link }}</a
+                    >
+                  </li>
+                }
+              </ul>
+            </div>
+          }
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="h-[75px] border-t border-slate-700/20">
+    <div
+      class="container flex h-full flex-wrap items-center justify-center text-center md:justify-between md:text-start lg:px-20"
+    >
+      <p class="text-base font-medium text-gray-400">
+        {{ currentYear }}
+        © Opixo -
+        <a href="javascript: void(0);"
+          >Design crafted
+          <lucide-angular
+            name="heart"
+            class="inline h-4 w-4 fill-red-500 text-red-500"
+          ></lucide-angular>
+          by Coderthemes.com</a
+        >
+      </p>
+      <p class="text-base font-medium text-gray-400">
+        <a href="javascript: void(0);">Terms Conditions & Policy</a>
+      </p>
+    </div>
+  </div>
+</footer>
