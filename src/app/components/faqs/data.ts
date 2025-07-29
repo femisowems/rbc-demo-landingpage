@@ -5,33 +5,33 @@ type FaqType = {
 
 export const faqsData: FaqType[] = [
   {
-    question: 'Question One?',
+    question: 'What is RBC Insight Edge and how does it work?',
     answer:
-      'Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. ',
+      'RBC Insight Edge is a data analytics dashboard designed to help small businesses make smarter decisions. It combines demographic data, location trends, and anonymized transaction insights to deliver real-time intelligence you can use to understand your customers, optimize operations, and identify new growth opportunities.',
   },
   {
-    question: 'Question Two?',
+    question: 'How is my business data protected on the platform?',
     answer:
-      'Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim. Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Duis leo. Sed fringilla mauris sit amet nibh.',
+      'RBC Insight Edge uses strict privacy and security standards to ensure your information is always protected. All data used is anonymized and aggregated, meaning it cannot be traced back to any individual or business. RBC also applies enterprise-level encryption and follows rigorous compliance protocols.',
   },
   {
-    question: 'Question Three?',
+    question: 'What types of insights can I get from the dashboard?',
     answer:
-      'Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. ',
+      'RBC Insight Edge provides insights into customer shopping behavior, location performance, new customer segments, staffing and store hour optimization, real estate decision-making, and key revenue drivers in your area.      ',
   },
   {
-    question: 'Question Four?',
+    question: 'How much does RBC Insight Edge cost, and what’s included in the Basic Plan?',
     answer:
-      'Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. ',
+      'The Basic Plan is free for all RBC business customers. It includes access to the dashboard, demographic data, location trends, and anonymized transaction insights. You can also upgrade to the Pro Plan for more advanced features and deeper insights.',
   },
   {
-    question: 'Question Five?',
+    question: 'Do I need to be an RBC customer to use Insight Edge?',
     answer:
-      'Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. ',
+      'Yes, RBC Insight Edge is exclusively available to RBC business customers. If you are not currently an RBC customer, you can sign up for a business account to gain access to the platform.',
   },
   {
-    question: 'Question Six?',
+    question: 'How do I sign up and access my dashboard?',
     answer:
-      'Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. ',
+      'To sign up for RBC Insight Edge, you need to be an RBC business customer. Once you have an account, you can log in to the RBC online banking portal and access the Insight Edge dashboard from there. If you need assistance, you can contact RBC support for help with the sign-up process.',
   },
 ]
