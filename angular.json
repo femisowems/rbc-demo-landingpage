@@ -36,9 +36,16 @@
               "node_modules/swiper/swiper-bundle.min.css"
             ],
             "scripts": [
-               "node_modules/preline/preline.js"
+              "node_modules/preline/preline.js"
             ],
-            "allowedCommonJsDependencies": ["gumshoejs"]
+            "allowedCommonJsDependencies": [
+              "gumshoejs"
+            ],
+            "server": "src/main.server.ts",
+            "prerender": true,
+            "ssr": {
+              "entry": "server.ts"
+            }
           },
           "configurations": {
             "production": {

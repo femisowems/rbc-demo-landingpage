@@ -7,7 +7,8 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "format": "prettier --write ./src"
+    "format": "prettier --write ./src",
+    "serve:ssr:opixo": "node dist/opixo/server/server.mjs"
   },
   "private": true,
   "dependencies": {
@@ -18,9 +19,12 @@
     "@angular/forms": "^18.1.0",
     "@angular/platform-browser": "^18.1.0",
     "@angular/platform-browser-dynamic": "^18.1.0",
+    "@angular/platform-server": "^18.1.0",
     "@angular/router": "^18.1.0",
+    "@angular/ssr": "^18.2.20",
     "@iconscout/unicons": "^4.0.8",
     "@tailwindcss/forms": "^0.5.9",
+    "express": "^4.18.2",
     "gumshoejs": "^5.1.2",
     "lucide-angular": "^0.451.0",
     "preline": "^2.5.0",
@@ -35,7 +39,9 @@
     "@angular-devkit/build-angular": "^18.1.1",
     "@angular/cli": "^18.1.1",
     "@angular/compiler-cli": "^18.1.0",
+    "@types/express": "^4.17.17",
     "@types/jasmine": "~5.1.0",
+    "@types/node": "^18.18.0",
     "autoprefixer": "^10.4.20",
     "jasmine-core": "~5.1.0",
     "karma": "~6.4.0",

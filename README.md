@@ -20,11 +20,12 @@ Complete user journey pages including:
 
 ## 🛠️ Tech Stack
 
-- **Framework**: [Angular 18](https://angular.dev/)
+- **Framework**: [Angular 18](https://angular.dev/) (with SSR Support)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Icons**: [Lucide Angular](https://lucide.dev/)
 - **Animations**: [Swiper](https://swiperjs.com/)
 - **Build Tool**: [Angular CLI](https://github.com/angular/angular-cli)
+- **Server**: [Express](https://expressjs.com/) (Node.js)
 
 ## 📦 Project Structure
 
@@ -34,7 +35,8 @@ src/app/
 ├── components/    # Reusable UI elements (Navbar, Footer, FAQs)
 ├── common/        # Shared services and utilities
 ├── demos/         # Main landing page demo implementations
-└── helper/        # Custom directives and helper functions
+├── helper/        # Custom directives and helper functions
+server.ts          # SSR Express Server Entry
 ```
 
 ## ⌨️ Getting Started
@@ -48,8 +50,22 @@ src/app/
 npm install
 ```
 
-### Development Server
-Run `npm run start` (or `ng serve`) for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+### Development Server (Client-side)
+Run `npm run start` (or `ng serve`) for a dev server. Navigate to `http://localhost:4200/`.
+
+> [!NOTE]
+> If you see a `TS2307` error in an existing `ng serve` terminal after the upgrade, simply restart the process to pick up the new SSR dependencies.
+
+### Server Side Rendering (SSR)
+To build and run the SSR version:
+```bash
+# 1. Build both browser and server bundles
+npm run build
+
+# 2. Start the SSR server
+npm run serve:ssr:opixo
+```
+Navigate to `http://localhost:4000/`.
 
 ### Build
 Run `npm run build` (or `ng build`) to build the project. The build artifacts will be stored in the `dist/` directory.
