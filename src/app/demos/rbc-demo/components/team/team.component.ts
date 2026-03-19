@@ -1,4 +1,11 @@
-import { Component, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core'
+import {
+  Component,
+  CUSTOM_ELEMENTS_SCHEMA,
+  Inject,
+  PLATFORM_ID,
+  type OnInit,
+} from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
 import { SwiperDirective } from '@components/swiper-directive.component'
 import { register } from 'swiper/element'
 import { Autoplay, Pagination } from 'swiper/modules'
@@ -6,7 +13,7 @@ import type { SwiperOptions } from 'swiper/types'
 import { teamMembers } from '../data'
 import type { TeamMemberType } from '../types'
 
-register()
+// register() is now called in ngOnInit with browser guard
 @Component({
   selector: 'saas-team',
   standalone: true,
@@ -15,7 +22,14 @@ register()
   styles: ``,
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
 })
-export class TeamComponent {
+export class TeamComponent implements OnInit {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
+
+  ngOnInit(): void {
+    if (isPlatformBrowser(this.platformId)) {
+      register()
+    }
+  }
   teamMembers: TeamMemberType[] = teamMembers
 
   swiperConfig: SwiperOptions = {

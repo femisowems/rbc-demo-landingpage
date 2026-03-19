@@ -1,5 +1,6 @@
 import { CommonModule } from '@angular/common'
-import { Component, HostListener } from '@angular/core'
+import { Component, HostListener, Inject, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
 
 @Component({
   selector: 'app-back-to-top',
@@ -18,14 +19,19 @@ import { Component, HostListener } from '@angular/core'
   styles: ``,
 })
 export class BackToTopComponent {
+  constructor(@Inject(PLATFORM_ID) private platformId: Object) {}
   isVisible = false
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    this.isVisible = window.scrollY > 500
+    if (isPlatformBrowser(this.platformId)) {
+      this.isVisible = window.scrollY > 500
+    }
   }
 
   scrollToTop() {
-    window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (isPlatformBrowser(this.platformId)) {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
   }
 }

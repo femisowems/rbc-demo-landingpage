@@ -1,4 +1,5 @@
-import { Component } from '@angular/core'
+import { Component, Inject, PLATFORM_ID } from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
 import {
   RouterOutlet,
   Router,
@@ -27,14 +28,19 @@ export class AppComponent {
   }
 
 
-  constructor(private router: Router) {}
+  constructor(
+    private router: Router,
+    @Inject(PLATFORM_ID) private platformId: Object
+  ) {}
 
   ngOnInit() {
     this.router.events.subscribe((event: Event) => {
       if (event instanceof NavigationEnd) {
-        setTimeout(() => {
-          window.HSStaticMethods.autoInit()
-        }, 100)
+        if (isPlatformBrowser(this.platformId)) {
+          setTimeout(() => {
+            window.HSStaticMethods.autoInit()
+          }, 100)
+        }
       }
     })
   }

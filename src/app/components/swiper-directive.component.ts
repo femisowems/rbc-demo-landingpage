@@ -1,4 +1,12 @@
-import { AfterViewInit, Directive, ElementRef, Input } from '@angular/core'
+import {
+  AfterViewInit,
+  Directive,
+  ElementRef,
+  Inject,
+  Input,
+  PLATFORM_ID,
+} from '@angular/core'
+import { isPlatformBrowser } from '@angular/common'
 import type { SwiperOptions } from 'swiper/types'
 
 @Directive({
@@ -11,14 +19,16 @@ export class SwiperDirective implements AfterViewInit {
   @Input('config') config?: SwiperOptions
 
   constructor(
-    private el: ElementRef<HTMLElement & { initialize: () => void }>
+    private el: ElementRef<HTMLElement & { initialize: () => void }>,
+    @Inject(PLATFORM_ID) private platformId: Object
   ) {
     this.swiperElement = el.nativeElement
   }
 
   ngAfterViewInit() {
-    Object.assign(this.el.nativeElement, this.config)
-
-    this.el.nativeElement.initialize()
+    if (isPlatformBrowser(this.platformId)) {
+      Object.assign(this.el.nativeElement, this.config)
+      this.el.nativeElement.initialize()
+    }
   }
 }
