@@ -5,7 +5,7 @@ import {
   LucideIconProvider,
   icons,
 } from 'lucide-angular'
-import { footerLinks } from './data'
+
 import { currentYear } from '@common/constants'
 @Component({
   selector: 'app-footer',
@@ -22,6 +22,6 @@ import { currentYear } from '@common/constants'
   styles: ``,
 })
 export class FooterComponent {
-  footerLinks = footerLinks
+
   currentYear = currentYear
 }
