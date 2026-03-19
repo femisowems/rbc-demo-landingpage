@@ -7,16 +7,16 @@ import { RouterLink } from '@angular/router'
   standalone: true,
   imports: [RouterLink, CommonModule],
   template: `
-    <a routerLink="/" class="logo">
+    <a routerLink="/" class="logo flex items-center gap-2">
       <img
-        src="assets/images/logo-dark.png"
-        class="logo-dark h-10"
-        alt="Opixo Logo"
+        src="assets/images/landing/rbc/rbc-logo.png"
+        class="logo-dark h-12"
+        alt="RBC Insight Edge Logo"
       />
       <img
-        src="assets/images/logo-light.png"
-        class="logo-light h-10"
-        alt="Opixo Logo"
+        src="assets/images/landing/rbc/rbc-logo.png"
+        class="logo-light h-12"
+        alt="RBC Insight Edge Logo"
       />
     </a>
   `,

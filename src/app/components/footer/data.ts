@@ -5,36 +5,30 @@ type FooterLinkType = {
 
 export const footerLinks: FooterLinkType[] = [
   {
-    title: 'About Us',
+    title: 'Solutions',
+    links: [
+      'Insight Edge',
+      'Small Business',
+      'Data Dashboards',
+      'Consumer Analytics',
+    ],
+  },
+  {
+    title: 'Resources',
     links: [
       'Support Center',
-      'Customer Support',
-      'About Us',
-      'Copyright',
-      'Popular Campaign',
-      'Return Policy',
-      'Privacy Policy',
-      'Terms & Conditions',
-    ],
-  },
-  {
-    title: 'My Account',
-    links: [
-      'Press Inquiries',
-      'Social Media Directories',
-      'Images & B-roll',
+      'Documentation',
       'Site Map',
-      'Store Hours',
       'Permissions',
-      'Speaker Requests',
+      'Security Guide',
     ],
   },
   {
-    title: 'Policy',
+    title: 'Legal',
     links: [
-      'Application Security',
-      'Software Principles',
-      'Software Policy',
+      'Terms & Conditions',
+      'Privacy Policy',
+      'Copyright',
       'Responsible Supply',
     ],
   },

@@ -39,23 +39,23 @@
         <div
           class="mt-4 flex items-center border-t border-gray-200 pt-4 lg:mt-0 lg:hidden lg:border-none lg:pt-0"
         >
-          <a href="#" class="nav-btn"
+          <a (click)="scrollToSection($event, '#contact')" href="#contact" class="nav-btn"
             ><lucide-angular
-              name="arrow-big-down-dash"
+              name="message-square"
               class="me-2 h-5 w-5"
             ></lucide-angular
-            >Download</a
+            >Get in Touch</a
           >
         </div>
       </div>
 
       <div class="hidden items-center lg:flex">
-        <a href="#" class="nav-btn"
+        <a (click)="scrollToSection($event, '#contact')" href="#contact" class="nav-btn"
           ><lucide-angular
-            name="arrow-big-down-dash"
+            name="message-square"
             class="me-2 h-5 w-5"
           ></lucide-angular
-          >Download</a
+          >Get in Touch</a
         >
       </div>
     </nav>

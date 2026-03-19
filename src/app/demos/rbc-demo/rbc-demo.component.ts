@@ -5,9 +5,9 @@ import { FeaturesComponent } from './components/features/features.component'
 import { HeroComponent } from './components/hero/hero.component'
 import { PricingComponent } from './components/pricing/pricing.component'
 import { ServicesComponent } from './components/services/services.component'
-import { TeamComponent } from './components/team/team.component'
 import { FooterComponent } from '../../components/footer/footer.component'
 import { PlatformComponent } from './components/security/platform.component'
+import { ContactUsComponent } from './components/contact-us/contact-us.component'
 
 @Component({
   selector: 'app-rbc-demo',
@@ -18,10 +18,10 @@ import { PlatformComponent } from './components/security/platform.component'
     ServicesComponent,
     FeaturesComponent,
     PricingComponent,
-    TeamComponent,
     FaqsComponent,
     FooterComponent,
-    PlatformComponent
+    PlatformComponent,
+    ContactUsComponent
   ],
   templateUrl: './rbc-demo.component.html',
   styleUrl: './rbc-demo.component.scss',
@@ -45,12 +45,12 @@ export class RBCComponent {
       link: '#price',
     },
     {
-      label: 'Team',
-      link: '#team',
-    },
-    {
       label: 'Faq',
       link: '#faq',
+    },
+    {
+      label: 'Contact',
+      link: '#contact',
     },
   ]
 }
