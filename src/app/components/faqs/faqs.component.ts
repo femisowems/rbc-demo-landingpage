@@ -14,7 +14,7 @@ import { faqsData } from './data'
     {
       provide: LUCIDE_ICONS,
       multi: true,
-      useValue: new LucideIconProvider(icons),
+      useFactory: () => new LucideIconProvider(icons),
     },
   ],
   templateUrl: './faqs.component.html',

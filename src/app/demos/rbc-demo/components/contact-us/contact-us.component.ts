@@ -14,7 +14,7 @@ import {
     {
       provide: LUCIDE_ICONS,
       multi: true,
-      useValue: new LucideIconProvider(icons),
+      useFactory: () => new LucideIconProvider(icons),
     },
   ],
   templateUrl: './contact-us.component.html',

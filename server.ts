@@ -5,6 +5,24 @@ import { fileURLToPath } from 'node:url';
 import { dirname, join, resolve } from 'node:path';
 import bootstrap from './src/main.server';
 
+// SSR/Prerender manual polyfills
+if (typeof window === 'undefined') {
+  (global as any).window = {};
+  (global as any).document = (global as any).window.document = {
+    querySelectorAll: () => [],
+    querySelector: () => null,
+    getElementById: () => null,
+    createElement: () => ({ style: {}, appendChild: () => {} }),
+    addEventListener: () => {},
+    removeEventListener: () => {},
+    documentElement: { style: {} },
+    body: { style: {} },
+  };
+  (global as any).self = (global as any).window;
+  (global as any).navigator = { userAgent: '' };
+  (global as any).getComputedStyle = () => ({ getPropertyValue: () => '' });
+}
+
 // The Express app is exported so that it can be used by serverless Functions.
 export function app(): express.Express {
   const server = express();

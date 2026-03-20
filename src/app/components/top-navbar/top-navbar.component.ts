@@ -10,7 +10,6 @@ import {
   type ElementRef,
 } from '@angular/core'
 import { isPlatformBrowser } from '@angular/common'
-import Gumshoe from 'gumshoejs'
 
 import {
   LUCIDE_ICONS,
@@ -28,7 +27,7 @@ import { LogoBoxComponent } from '../logo-box.component'
     {
       provide: LUCIDE_ICONS,
       multi: true,
-      useValue: new LucideIconProvider(icons),
+      useFactory: () => new LucideIconProvider(icons),
     },
   ],
   styles: ``,
@@ -43,7 +42,12 @@ export class TopNavbarComponent implements AfterViewInit {
 
   ngAfterViewInit() {
     if (isPlatformBrowser(this.platformId)) {
-      if (document.querySelector('.navbar-nav a')) new Gumshoe('.navbar-nav a')
+      import('gumshoejs').then((GumshoeModule) => {
+        const Gumshoe = GumshoeModule.default
+        if (document.querySelector('.navbar-nav a')) {
+          new Gumshoe('.navbar-nav a')
+        }
+      })
     }
   }
 

@@ -15,7 +15,7 @@ import { currentYear } from '@common/constants'
     {
       provide: LUCIDE_ICONS,
       multi: true,
-      useValue: new LucideIconProvider(icons),
+      useFactory: () => new LucideIconProvider(icons),
     },
   ],
   templateUrl: './footer.component.html',
