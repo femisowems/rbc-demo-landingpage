@@ -14,16 +14,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy()
   })
 
-  it(`should have the 'opixo' title`, () => {
+  it(`should have the 'rbc-insight-edge' title`, () => {
     const fixture = TestBed.createComponent(AppComponent)
     const app = fixture.componentInstance
-    expect(app.title).toEqual('opixo')
+    expect(app.title).toEqual('rbc-insight-edge')
   })
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent)
     fixture.detectChanges()
     const compiled = fixture.nativeElement as HTMLElement
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, opixo')
+    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, rbc-insight-edge')
   })
 })

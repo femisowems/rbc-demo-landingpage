@@ -63,7 +63,7 @@ To build and run the SSR version:
 npm run build
 
 # 2. Start the SSR server
-npm run serve:ssr:opixo
+npm run serve:ssr:rbc-insight-edge
 ```
 Navigate to `http://localhost:4000/`.
 

@@ -23,9 +23,8 @@ declare global {
   styleUrl: './app.component.scss',
 })
 export class AppComponent {
-  title(title: any) {
-    throw new Error('Method not implemented.')
-  }
+  title = 'rbc-insight-edge'
+
 
 
   constructor(
